@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="estilo.css">
 <title>Actores</title>
 </head>
     <body>
@@ -28,7 +28,7 @@
     <tbody>
     <?php
         include("open.php");
-        $consulta = "SELECT * FROM actores";
+        $consulta = "SELECT * FROM personas";
         $resultado = $conexion->query($consulta);
         while($row = $resultado->fetch_assoc()){
     ?>
@@ -40,7 +40,7 @@
             <td><?php echo $row['edad']; ?></td>
             <td><?php echo $row['pais']; ?></td>
             
-            <td><img height="50px" src="data:image/jpg;base64, <?php echo base64_encode($row['Imagen']); ?> "></td>
+            <td><img height="50px" src="data:image/jpg;base64, <?php echo base64_encode($row['imagen']); ?> "></td>
         </tr>
             <?php 
             }
